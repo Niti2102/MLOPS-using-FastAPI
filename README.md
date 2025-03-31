@@ -1,59 +1,56 @@
-Car Price Prediction API
-This repository contains a machine learning API built using FastAPI for predicting the price of a used car based on different features such as the car's year, fuel type, transmission type, etc. The API is deployed using Docker and is hosted on Render.
+# Car Price Prediction API
+This repository contains a machine learning model API for predicting the price of a used car based on various features like the car's year, fuel type, transmission, etc. The API is built using FastAPI and Docker, and is deployed on Render for seamless access.
 
-Project Overview
-The Car Price Prediction API provides two endpoints that predict the price of a car using Linear Regression and Lasso Regression models. The API is designed to receive car details and return the predicted price.
+# Project Overview
+The Car Price Prediction API uses Linear Regression and Lasso Regression models to predict the price of used cars. The models are trained on a dataset containing various car features. The FastAPI app provides endpoints to predict the price using both regression models.
 
-Tech Stack
-FastAPI: Framework for building the API.
+# Features:
+* Linear Regression Model: Predicts car prices using a linear approach.
 
-Scikit-learn: Machine learning models for car price prediction.
+* Lasso Regression Model: Provides an alternative prediction using Lasso regularization.
 
-Pandas: Data handling for pre-processing.
+* Scaling: The features are scaled for the Lasso model using StandardScaler.
 
-Docker: Containerization of the application.
+# Tech Stack
+* FastAPI: For creating the API endpoints.
 
-Render: Cloud hosting for deployment.
+* Scikit-learn: For machine learning models.
 
-pickle: For loading and saving machine learning models.
+* Docker: For containerizing the application.
 
-Prerequisites
-You need the following tools to run this API:
+* Render: For deploying the Docker container to the cloud.
 
-Python 3.9 or higher
+* Pandas: For data manipulation and handling.
 
-Docker (optional, for containerization)
+# Prerequisites
+To run the project locally, you'll need to install the following:
 
-Render account (optional, for cloud deployment)
+* Python 3.9 or higher
 
-Required Libraries
-fastapi: FastAPI framework for building the API.
+* Docker (for containerization)
 
-scikit-learn: For machine learning models.
+* A Render account for deployment
 
-uvicorn: ASGI server to run FastAPI.
+# Requirements
+* fastapi: FastAPI framework for building the API
 
-pandas: Data handling.
+* scikit-learn: Machine learning models and tools
 
-pickle: For saving and loading models.
-Troubleshooting
-If you face an issue like "No open ports detected" during deployment, follow these steps:
+* uvicorn: ASGI server to run FastAPI
 
-Ensure the Dockerfile has the EXPOSE 8000 line.
+* pandas: Data handling
 
-Set the Start Command in Render to uvicorn car:app --host 0.0.0.0 --port 8000.
+* pickle: For serializing the models
 
-License
+# Troubleshooting
+If you encounter an error like "No open ports detected" during deployment:
+
+* Ensure that the EXPOSE 8000 line is present in your Dockerfile.
+
+* Set the Start Command to uvicorn car:app --host 0.0.0.0 --port 8000 in Render.
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Project Structure:
-bash
-Copy
-Edit
-car-price-prediction-api/
-│
-├── car.py               # FastAPI app and ML model code
-├── Dockerfile           # Dockerfile for containerization
-├── requirements.txt     # Python dependencies
-├── README.md            # Project description and usage
-└── car_data.csv         # Dataset used for training the model (optional)
+# Example structure:
+![image](https://github.com/user-attachments/assets/7c076465-e2ae-4aa4-a3df-d204e4c62ba3)
+
